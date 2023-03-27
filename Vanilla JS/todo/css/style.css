@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.wrapper{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  color: white;
+  background: linear-gradient(5deg,#3c3b3f,#605c3c);
+  display:flex;
+  justify-content: space-between;
+
+  padding: 1rem;
+  /* 1rem = 16px (위 아래 좌 우 모두 16px씩 적용) */
+
+  align-items: center;
+  /* flex일때만 사용 가능 */
+}
+.input-box > label{
+  display: none;
+}
+
+.input-box > input{
+  padding: 0.5rem;
+  border : none;
+}
+.todo-list li{
+  border-bottom : 1px solid #eee;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.todo-like{
+  flex:1;
+}
+.todo-item{
+  flex:8;
+}
+.todo-manage{
+  flex:1;
+  display: flex;
+  justify-content: space-between;
+}
+.like{
+  cursor: pointer;
+  font-size: 18px !important;
+  color: red;
+}
+.check{
+  color: rgb(30, 252, 30);
+}
+.clear{
+  color: salmon;
+}
