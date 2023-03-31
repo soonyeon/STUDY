@@ -40,6 +40,21 @@
 .todo-item{
   flex:8;
 }
+
+.done .check{
+  visibility: hidden; 
+}
+/* visibility: 레이아웃을 변경하지 않고 요소를 보이거나 숨김 */
+
+i{cursor: pointer;}
+.done .todo-item{
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+
+
+
 .todo-manage{
   flex:1;
   display: flex;

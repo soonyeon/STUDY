@@ -29,6 +29,12 @@ const generateLike = () =>{
   icon.classList.add("material-icons");//icon에 'material-icons'라는 클래스를 추가해준다
   icon.classList.add("like")//icon에 'like'라는 스타일 추가
   icon.innerText = "favorite_border"
+  icon.addEventListener("click",() =>{
+      //삼항 연상자
+      // 조건 ? 참 : 거짓
+      icon.innerText === "favorite_border" ? icon.innerText = "favorite" : icon.innerText = "favorite_border"
+  });
+  
   span.appendChild(icon);
   console.log(span);
   return span;
@@ -52,6 +58,17 @@ const generateManage = () =>{
   icon2.classList.add("material-icons");
   icon2.classList.add("clear");
   icon2.innerText = "clear"
+
+  icon1.addEventListener("click",(e) =>{
+    const li = e.target.parentNode.parentNode; //li를 li변수에 담는다
+    li.classList.add('done');
+    console.log(li);
+  });
+  icon2.addEventListener("click",(e) =>{
+    const li = e.target.parentNode.parentNode; //li를 li변수에 담는다
+    todoList.removeChild(li);
+  });
+
   span.appendChild(icon1);
   span.appendChild(icon2);
   return span;
